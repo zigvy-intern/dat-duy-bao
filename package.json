@@ -28,6 +28,7 @@
     "eslint-plugin-react": "^7.4.0",
     "mocha": "^4.0.1",
     "react-addons-test-utils": "^15.6.2",
-    "sinon": "^4.0.1"
+    "sinon": "^4.0.1",
+    "sinon-chai": "^2.14.0"
   }
 }
