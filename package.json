@@ -5,12 +5,13 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "babel-runtime": "^6.20.0",
+    "babel-runtime": "^6.26.0",
     "domready": "^1.0.8",
     "mantra-core": "^1.7.0",
     "meteor-node-stubs": "~0.2.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-komposer": "^1.13.1",
     "react-mounter": "^1.2.0"
   },
   "devDependencies": {
