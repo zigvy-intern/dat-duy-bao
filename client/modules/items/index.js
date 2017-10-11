@@ -11,7 +11,16 @@ const Item = ({content}) => (
           <a href="/edit"><Glyphicon glyph="pencil"></Glyphicon></a>
         </Col>
       </Row>
-      <p>Some details about the thing that needs to be done.</p>
+      <Row>
+        <Col xs={12}>
+          <p>Some details about the thing that needs to be done.</p>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12}>
+          <Input type="checkbox" label="Complete?"/>
+        </Col>
+      </Row>
     </Panel>
   </Col>
 );
