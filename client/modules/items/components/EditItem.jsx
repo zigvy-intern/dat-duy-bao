@@ -8,10 +8,10 @@ const EditItem = ({content}) => (
         <a href="/"><Glyphicon glyph="chevron-left"></Glyphicon> Back to Items</a>
       <form>
       <FormGroup>
-      <FormControl type="text" placeholder="Name" />
-      <FormControl type="textarea" placeholder="Description" />
-      <DateTimeField />
-      <Button bsStyle="primary" type="submit">Save Item</Button>
+        <FormControl type="text" placeholder="Name" />
+        <FormControl type="textarea" placeholder="Description" />
+        <DateTimeField />
+        <Button bsStyle="primary" type="submit">Save Item</Button>
       </FormGroup>
       </form>
     </Panel>
