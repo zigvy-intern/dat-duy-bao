@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Panel, FormGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
+import DateTimeField from 'react-bootstrap-datetimepicker';
 const EditItem = ({content}) => (
   <Col xs={12} sm={6} smOffset={3}>
     <Panel>
