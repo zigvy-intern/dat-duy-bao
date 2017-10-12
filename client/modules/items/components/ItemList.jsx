@@ -3,18 +3,20 @@ import Item from './Item.jsx';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import ItemProgress from './ItemProgress.jsx';
 
-const ItemList = ({content = () => null }) => (
+const ItemList = ({items}) => (
   <Row>
     <Row>
       <Col xs={12} sm={6}>
         <ItemProgress />
       </Col>
     </Row>
-<Row className="show-grid">
-  <Col xs={12}>
-    <a href="/edit"><Glyphicon glyph="plus"></Glyphicon> New Item</a>
-  </Col>
-  <Item />
+  <Row className="show-grid">
+      <Col xs={12}>
+        <a href="/edit"><Glyphicon glyph="plus"></Glyphicon> New Item</a>
+      </Col>
+      {items.map(item => (
+        <Item key={item._id} />
+      ))}
   </Row>
 </Row>
 );
