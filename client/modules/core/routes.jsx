@@ -12,7 +12,7 @@ import Login from '../users/containers/Login.js';
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/', {
+FlowRouter.route('/', {
     name: 'items.list',
     action() {
       mount(MainLayoutCtx, {
@@ -53,57 +53,26 @@ FlowRouter.route('/categories/new/', {
     }
 });
 FlowRouter.route('/register', {
- name: 'users.new',
- action() {
- mount(MainLayoutCtx, {
- content: () => (<NewUser />)
- });
- }
+   name: 'users.new',
+   action() {
+     mount(MainLayoutCtx, {
+       content: () => (<NewUser />)
+     });
+   }
  });
  FlowRouter.route('/login', {
- name: 'users.login',
- action() {
- mount(MainLayoutCtx, {
- content: () => (<Login />)
- });
- }
+   name: 'users.login',
+   action() {
+     mount(MainLayoutCtx, {
+       content: () => (<Login />)
+     });
+   }
 });
 FlowRouter.route('/logout', {
- name: 'users.logout',
- action() {
- Meteor.logout();
- FlowRouter.go('/');
- }
+   name: 'users.logout',
+   action() {
+     Meteor.logout();
+     FlowRouter.go('/');
+   }
  });
-  FlowRouter.route('/categories', {
-    name: 'categories.list',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<CategoryList />)
-      });
-    }
-  });
-  FlowRouter.route('/categories/new/', {
-    name: 'categories.new',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<NewCategory />)
-      });
-    }
-});
-FlowRouter.route('/login', {
-    name: 'users.login',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Login />)
-      });
-    }
-});
-FlowRouter.route('/logout', {
-    name: 'users.logout',
-    action() {
-      Meteor.logout();
-      FlowRouter.go('/');
-    }
-  });
 }
