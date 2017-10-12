@@ -18,6 +18,7 @@ const ItemList = ({items}) => (
         <Item key={item._id} />
       ))}
   </Row>
+  <Item key={item._id} item={item} />
 </Row>
 );
 export default ItemList;
