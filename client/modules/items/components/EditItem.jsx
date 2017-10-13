@@ -18,7 +18,7 @@ class EditItem extends React.Component {
             defaultValue={item ? item.description : ''}/>
           <DateTimeField />
           <Button onClick={this.createItem.bind(this)}
-            bsStyle="primary" type="submit" value="Save Item"/>
+            bsStyle="primary" type="submit" >Save Item</Button>
         </FormGroup>
         </form>
       </Panel>

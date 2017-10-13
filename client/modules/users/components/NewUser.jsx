@@ -14,7 +14,7 @@ class NewUser extends React.Component {
               <FormControl ref="email" type="email" placeholder="Email" />
               <FormControl ref="password" type="password" placeholder="Password" />
               <Button onClick={this.createUser.bind(this)}
-              bsStyle="primary" type="submit" value="Sign Up"/>
+              bsStyle="primary" type="submit" >Sign Up</Button>
               </FormGroup>
             </form>
           </Panel>
