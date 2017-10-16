@@ -2,7 +2,6 @@ import React from 'react';
 import Item from './Item.jsx';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import ItemProgress from './ItemProgress.jsx';
-const items = Collections.Items.find({}, {sort: {due: -1}}).fetch();
 
 const ItemList = ({items}) => (
   <Row>
