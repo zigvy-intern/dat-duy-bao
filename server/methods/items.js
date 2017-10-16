@@ -12,14 +12,15 @@ export default function () {
   });
 
   Meteor.methods({
-    'items.create'(name, description) {
-      check(name, String);
-      check(description, String);
-      const createdAt = new Date();
-      const item = {name, description, createdAt};
-      Items.insert(item);
-    }
-  });
+ 'items.create'(name, description, due) {
+ check(name, String);
+ check(description, String);
+ check(due, String);
+ const createdAt = new Date();
+ const item = {name, description, due, createdAt};
+ Items.insert(item);
+ }
+});
 
   Meteor.methods({
     'items.markComplete'(complete, itemId) {
