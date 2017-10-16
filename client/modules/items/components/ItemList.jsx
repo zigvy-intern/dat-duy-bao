@@ -2,6 +2,7 @@ import React from 'react';
 import Item from './Item.jsx';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import ItemProgress from './ItemProgress.jsx';
+const items = Collections.Items.find({}, {sort: {due: -1}}).fetch();
 
 const ItemList = ({items}) => (
   <Row>
@@ -15,10 +16,10 @@ const ItemList = ({items}) => (
         <a href="/edit"><Glyphicon glyph="plus"></Glyphicon> New Item</a>
       </Col>
       {items.map(item => (
-        <Item key={item._id} />
+        <Item key={item._id} item={item} />
       ))}
   </Row>
-  <Item key={item._id} item={item} />
+
 </Row>
 );
 export default ItemList;
