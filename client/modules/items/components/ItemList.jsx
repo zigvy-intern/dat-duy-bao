@@ -18,7 +18,6 @@ const ItemList = ({items}) => (
         <Item key={item._id} item={item} />
       ))}
   </Row>
-
 </Row>
 );
 export default ItemList;
