@@ -30,7 +30,7 @@ createItem(e) {
  const {create} = this.props;
   const element =this.refName.value;
   const description =this.refDes.value;
-  createItems(element,description);
+  create(element,description);
   // const {name, description} = this.refs;
   // create(this.refName.getValue());
   // element.getInputDOMNode().value = '';
