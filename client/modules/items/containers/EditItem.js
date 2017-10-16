@@ -23,7 +23,7 @@ export const composer = ({context, itemId, clearErrors}, onData) => {
   return clearErrors;
 };
 export const depsMapper = (context, actions) => ({
-  create: actions.items.create,
+  createItems: actions.items.create,
   edit: actions.items.edit,
   clearErrors: actions.items.clearErrors,
   context: () => context

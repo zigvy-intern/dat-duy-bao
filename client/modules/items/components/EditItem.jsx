@@ -28,8 +28,9 @@ class EditItem extends React.Component {
 createItem(e) {
  e.preventDefault();
  const {create} = this.props;
-  console.log(this.refName.value);
-  console.log(this.refDes.value);
+  const element =this.refName.value;
+  const description =this.refDes.value;
+  createItems(element,description);
   // const {name, description} = this.refs;
   // create(this.refName.getValue());
   // element.getInputDOMNode().value = '';
