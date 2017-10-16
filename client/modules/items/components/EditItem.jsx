@@ -12,9 +12,9 @@ class EditItem extends React.Component {
         <h1>{item ? 'Edit' : 'Add'} Item</h1>
         <form>
         <FormGroup>
-          <FormControl ref="name" type="text" placeholder="Name"
+          <FormControl inputRef={element => this.refName = element} type="text" placeholder="Name"
             defaultValue={item ? item.name : ''}/>
-          <FormControl ref="description" type="textarea" placeholder="Description"
+          <FormControl inputRef={description => this.refDes = description} type="textarea" placeholder="Description"
             defaultValue={item ? item.description : ''}/>
           <DateTimeField ref="due" inputFormat="MM/DD/Y" defaultText=""/>
           <Button onClick={this.createItem.bind(this)}
@@ -28,10 +28,11 @@ class EditItem extends React.Component {
 createItem(e) {
  e.preventDefault();
  const {create} = this.props;
- const {name, description, due} = this.refs;
- create(name.getValue(), description.getValue(), due.getValue());
- name.getInputDOMNode().value = '';
- description.getInputDOMNode().value = '';
+  console.log(this.refName.value);
+  console.log(this.refDes.value);
+  // const {name, description} = this.refs;
+  // create(this.refName.getValue());
+  // element.getInputDOMNode().value = '';
 }
 }
 export default EditItem;
