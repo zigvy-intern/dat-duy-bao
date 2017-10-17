@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Panel, Glyphicon, Input } from 'react-bootstrap';
+import { Row, Col, Panel, Glyphicon, Input, FormControl, FormGroup } from 'react-bootstrap';
 
 
 
@@ -30,8 +30,11 @@ class Item extends React.Component {
           </Row>
           <Row>
             <Col xs={12}>
-              <Input ref="complete" type="checkbox"
-                    label="Complete?" onChange={this.markComplete.bind(this)}/>
+              <form>
+              <FormGroup>
+              <FormControl type="checkbox"  label="Complete?" />
+              </FormGroup>
+              </form>
             </Col>
           </Row>
         </Panel>
