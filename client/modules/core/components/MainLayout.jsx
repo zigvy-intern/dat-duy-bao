@@ -8,7 +8,6 @@ const Layout = ({content}) => (
         <PageHeader>Impossible List </PageHeader>
       </Col>
     </Row>
-
     {content()}
   </Grid>
 );

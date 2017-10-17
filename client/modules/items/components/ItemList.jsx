@@ -3,8 +3,9 @@ import Item from './Item.jsx';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import ItemProgress from './ItemProgress.jsx';
 
-const ItemList = ({items}) => (
+const ItemList = ({items,percentage}) => (
   <Row>
+    <ItemProgress percentage={percentage} />
     <Row>
       <Col xs={12} sm={6}>
         <ItemProgress />
